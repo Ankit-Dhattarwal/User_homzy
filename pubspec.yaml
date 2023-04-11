@@ -71,6 +71,28 @@ flutter:
   - assets/images/cleaning.png
   - assets/images/painting.png
   - assets/images/Repair.png
+  - assets/carsoul_image/salon_banner.jpeg
+  - assets/carsoul_image/massage_salon_men.jpeg
+  - assets/carsoul_image/plumber_banner.jpeg
+  - assets/carsoul_image/electric_banner.jpeg
+  - assets/salon_men/salon_service_men.jpeg
+  - assets/salon_men/men_shaving.jpeg
+  - assets/salon_men/men_hair_color.jpeg
+  - assets/salon_men/facila_treatment.jpeg
+  - assets/salon_women/manicure.webp
+  - assets/salon_women/haircut.jpeg
+  - assets/salon_women/hair_color.jpeg
+  - assets/salon_women/glow.jpeg
+  - assets/sub_service/plumber_image/Faucet.jpeg
+  - assets/sub_service/plumber_image/pipe_repair.jpeg
+  - assets/sub_service/plumber_image/water_heater.png
+  - assets/sub_service/plumber_image/water_purifier.webp
+  - assets/sub_service/Electric_image/ac_repair.jpeg
+  - assets/sub_service/Electric_image/washing_image.jpeg
+  - assets/sub_service/Electric_image/Lighting.jpeg
+  - assets/sub_service/Electric_image/referegator-repairing-large.jpg
+  - assets/sub_service/plumber_subscreen.jpeg
+  - assets/sub_service/470110063 (1).jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

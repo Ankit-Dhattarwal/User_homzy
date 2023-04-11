@@ -20,7 +20,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
           height: 80,
           width: 80,
           decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage('assets/small_services/pet.png'),),
+            image: DecorationImage(image: AssetImage(''),),
             color: Colors.white70,
             borderRadius: BorderRadius.circular(10),
           ),
@@ -117,14 +117,15 @@ class _ServiceInfoState extends State<ServiceInfo> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        title: Text("Homzy 🏠"),
         elevation: 0.0,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black,),
-          onPressed: (){
-
-          },
-        ),
+        // leading: IconButton(
+        //   icon: Icon(Icons.arrow_back, color: Colors.black,),
+        //   onPressed: (){
+        //
+        //   },
+        // ),
       ),
       body: Column(
         children: [
@@ -133,16 +134,15 @@ class _ServiceInfoState extends State<ServiceInfo> {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage('https://friendswithfur.com.au/wp-content/uploads/2019/08/hero_home_3.png'),
+                  image: AssetImage('assets/sub_service/470110063 (1).jpg'),
                 ),
               ),
             ),
           ),
-          Divider(
-            color: Colors.grey,
-            height: 30,
-            thickness: 1,
-          ),
+          // Divider(
+          //   color: Colors.grey,
+          //   thickness: 1,
+          // ),
           Expanded(
             flex: 2,
             child: Container(
