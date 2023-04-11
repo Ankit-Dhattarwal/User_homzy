@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:final_homzy/small_serice/account_page.dart';
 import 'package:final_homzy/small_serice/takedata_page.dart';
+import 'package:final_homzy/small_serice/booked_service.dart';
 
 
 
@@ -2124,10 +2125,10 @@ class HomeScreen extends StatelessWidget {
               // );
               break;
             case 1:
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => ServiceRequestScreen()),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => bookSubPage()),
+              );
               break;
             case 2:
               Navigator.push(
