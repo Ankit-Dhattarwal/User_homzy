@@ -1529,7 +1529,7 @@ class HomeScreen extends StatelessWidget {
                                         topLeft: Radius.circular(15),
                                         topRight: Radius.circular(15),
                                       ),
-                                      child: Image.asset('assets/sub_service/plumber_image/pipe_repair.jpeg', height: 150, width: 150, fit: BoxFit.cover,),
+                                      child: Image.asset('assets/sub_service/plumber_image/piper_repair_2.0.jpeg', height: 150, width: 150, fit: BoxFit.cover,),
                                     ),
                                   ),
                                 ],

@@ -94,6 +94,7 @@ flutter:
   - assets/sub_service/plumber_subscreen.jpeg
   - assets/sub_service/470110063 (1).jpg
   - assets/sub_service/plumber_image/pipe_repair.jpeg
+  - assets/sub_service/plumber_image/piper_repair_2.0.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
