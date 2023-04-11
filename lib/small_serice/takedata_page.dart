@@ -2,75 +2,87 @@ import 'package:flutter/material.dart';
 import 'package:final_homzy/small_serice/account_page.dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
 
-
-class LocationScreen extends StatefulWidget {
+class  extends StatefulWidget {
   @override
-  _LocationScreenState createState() => _LocationScreenState();
+  _MySubScreenState createState() => _MySubScreenState();
 }
 
-class _LocationScreenState extends State<LocationScreen> {
+class _MySubScreenState extends State<MySubScreen> {
   TextEditingController _cityController = TextEditingController();
+  TextEditingController _colonyController = TextEditingController();
   TextEditingController _houseNumberController = TextEditingController();
-  TextEditingController _colonyNameController = TextEditingController();
-  TextEditingController _descriptionController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Location Screen'),
+        title: Text('Enter Address Details'),
       ),
-      body: Padding(
+      body: Container(
         padding: EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(height: 16.0),
+            Text(
+              'City Name:',
+              style: TextStyle(fontSize: 16.0),
+            ),
+            SizedBox(height: 8.0),
             TextField(
               controller: _cityController,
               decoration: InputDecoration(
-                hintText: 'City name',
+                hintText: 'Enter City Name',
+                border: OutlineInputBorder(),
               ),
             ),
             SizedBox(height: 16.0),
+            Text(
+              'Colony Name:',
+              style: TextStyle(fontSize: 16.0),
+            ),
+            SizedBox(height: 8.0),
+            TextField(
+              controller: _colonyController,
+              decoration: InputDecoration(
+                hintText: 'Enter Colony Name',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            SizedBox(height: 16.0),
+            Text(
+              'House Number:',
+              style: TextStyle(fontSize: 16.0),
+            ),
+            SizedBox(height: 8.0),
             TextField(
               controller: _houseNumberController,
               decoration: InputDecoration(
-                hintText: 'House number',
+                hintText: 'Enter House Number',
+                border: OutlineInputBorder(),
               ),
             ),
             SizedBox(height: 16.0),
-            TextField(
-              controller: _colonyNameController,
-              decoration: InputDecoration(
-                hintText: 'Colony name',
-              ),
+            Row(
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Upload Image'),
+                ),
+              ],
             ),
             SizedBox(height: 16.0),
-            TextField(
-              controller: _descriptionController,
-              decoration: InputDecoration(
-                hintText: 'Description',
-              ),
-              maxLines: 3,
-            ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () {
-                String city = _cityController.text;
-                String houseNumber = _houseNumberController.text;
-                String colonyName = _colonyNameController.text;
-                String location = '$houseNumber, $colonyName, $city';
-                String description = _descriptionController.text;
-                // Do something with the entered location and description
-              },
-              child: GestureDetector(
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ServiceInfo()),
-                  );
-                },
-                  child: Text('Submit')),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // Perform Submit Action Here
+                    },
+                    child: Text('Submit'),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

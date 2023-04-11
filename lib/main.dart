@@ -3,6 +3,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:final_homzy/small_serice/account_page.dart';
 import 'package:final_homzy/small_serice/takedata_page.dart';
 import 'package:final_homzy/small_serice/booked_service.dart';
+import 'package:final_homzy/small_serice/small_service_salon.dart';
 
 
 
