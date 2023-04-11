@@ -77,7 +77,10 @@ class _LocationScreenState extends State<LocationScreen> {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      // Perform Submit Action Here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ServiceInfo()),
+                      );
                     },
                     child: Text('Submit'),
                   ),
