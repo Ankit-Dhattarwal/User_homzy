@@ -116,21 +116,20 @@ class _ServiceInfoState extends State<ServiceInfo> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text("Homzy 🏠"),
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-        // leading: IconButton(
-        //   icon: Icon(Icons.arrow_back, color: Colors.black,),
-        //   onPressed: (){
-        //
-        //   },
-        // ),
-      ),
+      // appBar: AppBar(
+      //   elevation: 0.0,
+      //   title: Text(""),
+      //   backgroundColor: Colors.blue,
+      //   // leading: IconButton(
+      //   //   icon: Icon(Icons.arrow_back, color: Colors.black,),
+      //   //   onPressed: (){
+      //   //
+      //   //   },
+      //   // ),
+      // ),
       body: Column(
         children: [
-          Expanded(
-            flex: 1, // As u wise use or not  by default flex is always 1
+          Expanded(// As u wise use or not  by default flex is always 1
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -159,8 +158,8 @@ class _ServiceInfoState extends State<ServiceInfo> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Service", style: TextStyle(fontSize: 40, color: Colors.black54,fontWeight: FontWeight.bold),),
-                  Text("any things you want to write.....", style: TextStyle(color: Colors.black54),),
+                  Text("Plumber", style: TextStyle(fontSize: 40, color: Colors.black54,fontWeight: FontWeight.bold),),
+                  Text("Here we provide best service", style: TextStyle(color: Colors.black54, fontSize: 20),),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -182,7 +181,9 @@ class _ServiceInfoState extends State<ServiceInfo> {
                   ),
                   Text('Descipation', style: TextStyle(fontSize: 25, color: Colors.black54,fontWeight: FontWeight.bold),),
 
-                  Text('Provide in-home pet sitting and pet care services, including workday check-ins and feedings, litterbox, cage, and kennel cleaning, overnight care, and long-term vacation care.', style: TextStyle(color: Colors.black54),),
+                  Text('Plumbers install and repair pipes and fixtures that carry water, gas, or other fluids in homes and businesses.',
+                    style: TextStyle(color: Colors.black54, fontSize: 20),
+                  ),
 
                   Container(
                     height: 55,
