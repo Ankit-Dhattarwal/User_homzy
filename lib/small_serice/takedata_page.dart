@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:final_homzy/small_serice/account_page.dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
+import 'package:final_homzy/main.dart';
 
 class LocationScreen extends StatefulWidget {
   @override
@@ -79,7 +80,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ServiceInfo()),
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
                       );
                     },
                     child: Text('Submit'),

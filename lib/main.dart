@@ -4,6 +4,7 @@ import 'package:final_homzy/small_serice/account_page.dart';
 import 'package:final_homzy/small_serice/takedata_page.dart';
 import 'package:final_homzy/small_serice/booked_service.dart';
 import 'package:final_homzy/small_serice/small_service_salon.dart';
+import 'package:final_homzy/small_serice/small_service_page.dart';
 
 
 
@@ -11,24 +12,24 @@ void main() {
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
-  final List<Image> images = [
-    Image.asset(
-      'assets/carsoul_image/salon_banner.jpeg',
-      fit: BoxFit.contain,
-    ),
-    Image.asset(
-      'assets/carsoul_image/massage_salon_men.jpeg',
-      fit: BoxFit.contain,
-    ),
-    Image.asset(
-      'assets/carsoul_image/plumber_banner.jpeg',
-      fit: BoxFit.contain,
-    ),
-    Image.asset(
-      'assets/carsoul_image/electric_banner.jpeg',
-      fit: BoxFit.contain,
-    ),
-  ];
+  // final List<Image> images = [
+  //   Image.asset(
+  //     'assets/carsoul_image/salon_banner.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  //   Image.asset(
+  //     'assets/carsoul_image/massage_salon_men.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  //   Image.asset(
+  //     'assets/carsoul_image/plumber_banner.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  //   Image.asset(
+  //     'assets/carsoul_image/electric_banner.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  // ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,7 +42,196 @@ class MyApp extends StatelessWidget {
   }
 }
 class HomeScreen extends StatelessWidget {
-  @override
+  Widget SalonServiceConatiner(BuildContext context, String image, String name1, String name2){
+    return  Column(
+      children: [
+        Container(
+          height : 150,
+          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ServiceInfo()),
+                      );
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(3),
+                        topRight: Radius.circular(3),
+                        bottomLeft: Radius.circular(3),
+                        bottomRight: Radius.circular(3),
+                      ),
+                      child: Image.asset(image, height: 100, width: 100, fit: BoxFit.cover,),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 8,),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(name1,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Text(name2,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+ Widget ServiceCategories(BuildContext context, String image , String name1, String name2){
+    return Column(
+      children: [
+        Container(
+          height : 200,
+          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ServiceInfo()),
+                      );
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        topRight: Radius.circular(5),
+                        bottomLeft: Radius.circular(5),
+                        bottomRight: Radius.circular(5),
+                      ),
+                      child: Image.asset(image, height: 150, width: 150, fit: BoxFit.cover,),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 8,),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(name1,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Text(name2,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+ }
+ Widget SmallCategories(BuildContext context , String image , String name){
+    return  Flexible(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Color(0xFFe9e4f4),
+        ),
+        margin: EdgeInsets.only(left: 10, right: 10),
+        height: 100,
+        width: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              child: Image.asset(image, height: 50, width: 50),
+            ),
+            SizedBox(height: 8),
+            Padding(
+              padding: EdgeInsets.all(0.5),
+              child: Center(child:
+              Text(name,
+                style:
+                TextStyle(fontSize: 16,
+                  color:
+                  Colors.black54,
+                ),
+              ),
+              ),
+            ),
+          ],
+        ),
+
+      ),
+    );
+ }
+  Widget SmallCategoriesBasic(BuildContext context, String image, String name){
+    return  Flexible(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Color(0xFFe9e4f4),
+        ),
+        margin: EdgeInsets.only(left: 10),
+        height: 100,
+        width: 200,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              child: Image.asset(image, height: 50, width: 50),
+            ),
+
+            SizedBox(height: 8),
+            Padding(
+              padding: EdgeInsets.all(0.5),
+              child: Center(child:
+              Text(name,
+                style:
+                TextStyle(fontSize: 16,
+                  color:
+                  Colors.black54,
+                ),
+              ),
+              ),
+            ),
+          ],
+        ),
+
+      ),
+    );
+  }
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -75,146 +265,34 @@ class HomeScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                Flexible(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Color(0xFFe9e4f4),
-                    ),
-                    margin: EdgeInsets.only(left: 10),
-                    height: 100,
-                    width: 200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          child: Image.asset('assets/images/spa.png', height: 50, width: 50),
-                        ),
-                        SizedBox(height: 8),
-                        Padding(
-                          padding: EdgeInsets.all(0.5),
-                          child: Center(child:
-                          Text('Women Spa',
-                            style:
-                            TextStyle(fontSize: 16,
-                              color:
-                              Colors.black54,
-                            ),
-                          ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                  ),
+                SmallCategories(
+                  context,
+                  "assets/images/spa.png",
+                  "Women Spa",
                 ),
-                Flexible(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      color: Color(0xFFe9e4f4),
-                    ),
-                    margin: EdgeInsets.only(left: 10, right: 10),
-                    height: 100,
-                    width: 200,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          child: Image.asset('assets/images/massage.png', height: 50, width: 50),
-                        ),
-                        SizedBox(height: 8),
-                        Padding(
-                          padding: EdgeInsets.all(0.5),
-                          child: Center(child:
-                          Text('Men Massage',
-                            style:
-                            TextStyle(fontSize: 16,
-                              color:
-                              Colors.black54,
-                            ),
-                          ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                  ),
+                SmallCategories(
+                  context,
+                  "assets/images/massage.png",
+                  "Men Massage",
                 ),
               ],
             ),
             Container(
               height: 150,
-              color: Colors.white,
               child: Row(
                 //    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Flexible(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Color(0xFFe9e4f4),
-                      ),
-                      margin: EdgeInsets.only(left: 10),
-                      height: 100,
-                      width: 200,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            child: Image.asset('assets/images/cleaning.png', height: 50, width: 50),
-                          ),
-
-                          SizedBox(height: 8),
-                          Padding(
-                            padding: EdgeInsets.all(0.5),
-                            child: Center(child:
-                            Text('Cleaning',
-                              style:
-                              TextStyle(fontSize: 16,
-                                color:
-                                Colors.black54,
-                              ),
-                            ),
-                            ),
-                          ),
-                        ],
-                      ),
-
-                    ),
+                  SmallCategoriesBasic(context,
+                    "assets/images/cleaning.png",
+                    "Cleaning",
                   ),
-                  Flexible(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Color(0xFFe9e4f4),
-                      ),
-                      margin: EdgeInsets.only(left: 10),
-                      height: 100,
-                      width: 200,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            child: Image.asset('assets/images/painting.png', height: 50, width: 50),
-                          ),
-                          SizedBox(height: 8),
-                          Padding(
-                            padding: EdgeInsets.all(0.5),
-                            child: Center(child:
-                            Text('Painting',
-                              style:
-                              TextStyle(fontSize: 16,
-                                color:
-                                Colors.black54,
-                              ),
-                            ),
-                            ),
-                          ),
-                        ],
-                      ),
-
-                    ),
+                  SmallCategoriesBasic(context,
+                    "assets/images/painting.png",
+                    "Painting",
+                  ),
+                  SmallCategoriesBasic(context,
+                    "assets/images/Repair.png",
+                    "Repair",
                   ),
                   // Flexible(
                   //   child: Container(
@@ -249,40 +327,6 @@ class HomeScreen extends StatelessWidget {
                   //     ),
                   //   ),
                   // ),
-                  Flexible(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Color(0xFFe9e4f4),
-                      ),
-
-                      margin: EdgeInsets.only(left: 10 , right: 10),
-                      height: 100,
-                      width: 200,
-
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            child: Image.asset('assets/images/Repair.png', height: 50, width: 50),
-                          ),
-                          SizedBox(height: 8),
-                          Padding(
-                            padding: EdgeInsets.all(0.5),
-                            child: Center(child:
-                            Text('Repair',
-                              style:
-                              TextStyle(fontSize: 16,
-                                color:
-                                Colors.black54,
-                              ),
-                            ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
                 ],
               ),
             ),
@@ -830,230 +874,23 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/salon_men/salon_service_men.jpeg', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Haircut &',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('styling',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/salon_men/men_shaving.jpeg', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Shaving',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/salon_men/men_hair_color.jpeg', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Hair',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('coloring',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                      ),
-                                      child: Image.asset('assets/salon_men/facila_treatment.jpeg', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Facial ',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('treatments',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    SalonServiceConatiner(context,
+                        "assets/salon_men/salon_service_men.jpeg",
+                        "Haircut &",
+                        "styling"),
+                    SalonServiceConatiner(context,
+                        "assets/salon_men/men_shaving.jpeg",
+                        "Shaving",
+                        ""),
+                    SalonServiceConatiner(context,
+                        "assets/salon_men/men_hair_color.jpeg",
+                        "Hair",
+                        "coloring"),
+                    SalonServiceConatiner(context,
+                        "assets/salon_men/facila_treatment.jpeg",
+                        "Facial",
+                        "treatments"),
+
                     // Container(
                     //   color: Colors.yellow,
                     //   height: 150,
@@ -1105,230 +942,25 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/salon_women/haircut.jpeg', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Haircut &',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('styling',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/salon_women/hair_color.jpeg', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Hair',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('coloring',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/salon_women/manicure.webp', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Manicure &',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('pedicure',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 150,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/salon_women/glow.jpeg', height: 100, width: 100, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Makeup',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('application',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                    SalonServiceConatiner(context,
+                        "assets/salon_women/haircut.jpeg",
+                        "Haircut &",
+                        "styling"),
+                    SalonServiceConatiner(context,
+                        "assets/salon_women/hair_color.jpeg",
+                        "Hair",
+                        "coloring"),
+
+                    SalonServiceConatiner(context,
+                        "assets/salon_women/manicure.webp",
+                        "Manicure &",
+                        "pedicure"),
+                    SalonServiceConatiner(context,
+                        "assets/salon_women/glow.jpeg",
+                        "Makeup",
+                        ""),
+
+
                     // Container(
                     //   color: Colors.yellow,
                     //   height: 150,
@@ -1448,229 +1080,25 @@ class HomeScreen extends StatelessWidget {
                     //   ),
                     // ),
                     // SizedBox(width: 10),
-                    Column(
-                      children: [
-                        Container(
-                          height : 200,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                      ),
-                                      child: Image.asset('assets/sub_service/plumber_image/Faucet.jpeg', height: 150, width: 150, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Faucet repair &',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('installation',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/plumber_image/Faucet.jpeg",
+                      "Faucet repair &",
+                      "installation",
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 200,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                      ),
-                                      child: Image.asset('assets/sub_service/plumber_image/piper_repair_2.0.jpeg', height: 150, width: 150, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Pipe repair &',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('replacement',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/plumber_image/piper_repair_2.0.jpeg",
+                      "Pipe repair &",
+                      "replacement",
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 200,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                      ),
-                                      child: Image.asset('assets/sub_service/plumber_image/water_heater.png', height: 150, width: 150, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Water heater & ',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('repair installation',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/plumber_image/water_heater.png",
+                      "Water heater &",
+                      "repair installation",
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 200,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                      ),
-                                      child: Image.asset('assets/sub_service/plumber_image/water_purifier.webp', height: 150, width: 150, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Water system ',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('installation',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/plumber_image/water_purifier.webp",
+                      "Water system &",
+                      "installation",
                     ),
                     // Container(
                     //   color: Colors.yellow,
@@ -1791,246 +1219,25 @@ class HomeScreen extends StatelessWidget {
                     //   ),
                     // ),
                     // SizedBox(width: 10),
-                    Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => LocationScreen ()),
-                            );
-                          },
-                          child: Container(
-                            height : 200,
-                            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Stack(
-                                  children: [
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(builder: (context) => LocationScreen()),
-                                        );
-                                      },
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(15),
-                                          topRight: Radius.circular(15),
-                                        ),
-                                        child: Image.asset('assets/sub_service/Electric_image/ac_repair.jpeg', height: 150, width: 150, fit: BoxFit.cover,),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 8,),
-                                Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 5),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('AC repair &',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15,
-                                        ),
-                                      ),
-                                      Text('installation',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 15,
-                                        ),),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/Electric_image/ac_repair.jpeg",
+                      "Ac repair &",
+                      "installation",
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 200,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(5),
-                                        topRight: Radius.circular(5),
-                                      ),
-                                      child: Image.asset('assets/sub_service/Electric_image/Lighting.jpeg', height: 150, width: 150, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Lighting',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/Electric_image/Lighting.jpeg",
+                      "Lighting",
+                      "",
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 200,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                      ),
-                                      child: Image.asset('assets/sub_service/Electric_image/referegator-repairing-large.jpg', height: 150, width: 150, fit: BoxFit.cover,),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Refrigerator',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text('Repair',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
+                      "Refrigerator",
+                      "Repair",
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          height : 200,
-                          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Stack(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LocationScreen()),
-                                      );
-                                    },
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15),
-                                      ),
-                                      child: Image.asset(
-                                        'assets/sub_service/Electric_image/washing_image.jpeg',
-                                        height: 150,
-                                        width: 150,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 8,),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 5),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Washing Machine',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                    Text(
-                                      'repair',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 15,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-
-                        ),
-                      ],
+                    ServiceCategories(context,
+                      "assets/sub_service/Electric_image/washing_image.jpeg",
+                      "Washing Machine",
+                      "repair",
                     ),
                     // Container(
                     //   color: Colors.yellow,
