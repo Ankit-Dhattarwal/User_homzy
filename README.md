@@ -1,6 +1,6 @@
 # today_homzy
 
-A new Flutter project.
+A Fully forntend of the Homzy User App 
 
 ## Getting Started
 
