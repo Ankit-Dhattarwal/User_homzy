@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ServiceInfo()),
+                        MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2,)),
                       );
                     },
                     child: ClipRRect(
@@ -101,7 +101,7 @@ class HomeScreen extends StatelessWidget {
       ],
     );
   }
- Widget ServiceCategories(BuildContext context, String image , String name1, String name2){
+  Widget ServiceCategories(BuildContext context, String image , String name1, String name2){
     return Column(
       children: [
         Container(
@@ -119,7 +119,7 @@ class HomeScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => ServiceInfo()),
+                        MaterialPageRoute(builder: (context) => ServiceInfo(name: name1+name2,)),
                       );
                     },
                     child: ClipRRect(
@@ -159,8 +159,8 @@ class HomeScreen extends StatelessWidget {
         ),
       ],
     );
- }
- Widget SmallCategories(BuildContext context , String image , String name){
+  }
+  Widget SmallCategories(BuildContext context , String image , String name){
     return  Flexible(
       child: Container(
         decoration: BoxDecoration(
@@ -194,7 +194,7 @@ class HomeScreen extends StatelessWidget {
 
       ),
     );
- }
+  }
   Widget SmallCategoriesBasic(BuildContext context, String image, String name){
     return  Flexible(
       child: Container(
@@ -231,7 +231,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -1327,10 +1327,10 @@ class HomeScreen extends StatelessWidget {
         onTap: (int index) {
           switch (index) {
             case 0:
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => HomeScreen()),
-              // );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => HomeScreen()),
+            // );
               break;
             case 1:
               Navigator.push(
