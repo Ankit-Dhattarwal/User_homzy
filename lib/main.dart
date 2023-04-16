@@ -43,125 +43,130 @@ class MyApp extends StatelessWidget {
 }
 class HomeScreen extends StatelessWidget {
   Widget SalonServiceConatiner(BuildContext context, String image, String name1, String name2){
-    return  Column(
-      children: [
-        Container(
-          height : 150,
-          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Stack(
-                children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2,)),
-                      );
-                    },
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(3),
-                        topRight: Radius.circular(3),
-                        bottomLeft: Radius.circular(3),
-                        bottomRight: Radius.circular(3),
-                      ),
-                      child: Image.asset(image, height: 100, width: 100, fit: BoxFit.cover,),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 8,),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+    return  Container(
+   //   width: 200,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            height : 150,
+            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Stack(
                   children: [
-                    Text(name1,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2,)),
+                        );
+                      },
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(3),
+                          topRight: Radius.circular(3),
+                          bottomLeft: Radius.circular(3),
+                          bottomRight: Radius.circular(3),
+                        ),
+                        child: Image.asset(image, height: 100, width: 100, fit: BoxFit.cover,),
                       ),
                     ),
-                    Text(name2,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),),
                   ],
                 ),
-              ),
-            ],
+                SizedBox(height: 8,),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(name1,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(name2,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
   Widget ServiceCategories(BuildContext context, String image , String name1, String name2){
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
-          height : 200,
-          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Stack(
+            Container(
+              height : 200,
+              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ServiceInfo(name: name1+name2,)),
-                      );
-                    },
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        topRight: Radius.circular(5),
-                        bottomLeft: Radius.circular(5),
-                        bottomRight: Radius.circular(5),
+                  Stack(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ServiceInfo(name: name1+name2,)),
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(5),
+                            topRight: Radius.circular(5),
+                            bottomLeft: Radius.circular(5),
+                            bottomRight: Radius.circular(5),
+                          ),
+                          child: Image.asset(image, height: 150, width: 150, fit: BoxFit.cover,),
+                        ),
                       ),
-                      child: Image.asset(image, height: 150, width: 150, fit: BoxFit.cover,),
+                    ],
+                  ),
+                  SizedBox(height: 8,),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(name1,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Text(name2,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),),
+                      ],
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 8,),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(name1,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),
-                    ),
-                    Text(name2,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+            ),
       ],
     );
   }
   Widget SmallCategories(BuildContext context , String image , String name){
-    return  Flexible(
+    return  Expanded(
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
@@ -169,7 +174,6 @@ class HomeScreen extends StatelessWidget {
         ),
         margin: EdgeInsets.only(left: 10, right: 10),
         height: 100,
-        width: 200,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -196,15 +200,14 @@ class HomeScreen extends StatelessWidget {
     );
   }
   Widget SmallCategoriesBasic(BuildContext context, String image, String name){
-    return  Flexible(
+    return  Expanded(
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Color(0xFFe9e4f4),
         ),
-        margin: EdgeInsets.only(left: 10),
+        margin: EdgeInsets.only(left: 10, right: 10),
         height: 100,
-        width: 200,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -876,7 +879,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     SalonServiceConatiner(context,
                         "assets/salon_men/salon_service_men.jpeg",
-                        "Haircut &",
+                        "Haircut ",
                         "styling"),
                     SalonServiceConatiner(context,
                         "assets/salon_men/men_shaving.jpeg",
@@ -944,7 +947,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     SalonServiceConatiner(context,
                         "assets/salon_women/haircut.jpeg",
-                        "Haircut &",
+                        "Haircut ",
                         "styling"),
                     SalonServiceConatiner(context,
                         "assets/salon_women/hair_color.jpeg",
@@ -953,7 +956,7 @@ class HomeScreen extends StatelessWidget {
 
                     SalonServiceConatiner(context,
                         "assets/salon_women/manicure.webp",
-                        "Manicure &",
+                        "Manicure ",
                         "pedicure"),
                     SalonServiceConatiner(context,
                         "assets/salon_women/glow.jpeg",
@@ -1082,22 +1085,22 @@ class HomeScreen extends StatelessWidget {
                     // SizedBox(width: 10),
                     ServiceCategories(context,
                       "assets/sub_service/plumber_image/Faucet.jpeg",
-                      "Faucet repair &",
+                      "Faucet repair ",
                       "installation",
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/plumber_image/piper_repair_2.0.jpeg",
-                      "Pipe repair &",
+                      "Pipe repair ",
                       "replacement",
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/plumber_image/water_heater.png",
-                      "Water heater &",
+                      "Water heater ",
                       "repair installation",
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/plumber_image/water_purifier.webp",
-                      "Water system &",
+                      "Water system ",
                       "installation",
                     ),
                     // Container(
@@ -1221,7 +1224,7 @@ class HomeScreen extends StatelessWidget {
                     // SizedBox(width: 10),
                     ServiceCategories(context,
                       "assets/sub_service/Electric_image/ac_repair.jpeg",
-                      "Ac repair &",
+                      "Ac repair ",
                       "installation",
                     ),
                     ServiceCategories(context,

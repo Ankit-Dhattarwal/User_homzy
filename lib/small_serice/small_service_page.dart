@@ -33,7 +33,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(serviceName, style: TextStyle(fontSize: 20, color: Colors.black54,fontWeight: FontWeight.bold),),
+            Text(serviceName, style: TextStyle(fontSize: 30, color: Colors.black54,fontWeight: FontWeight.bold),),
             Text(line, style: TextStyle(color: Colors.black54, fontSize: 20),),
 
             Row(
@@ -141,7 +141,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
             ),// As u wise use or not  by default flex is always 1
           ),
           containerData(context,
-          widget.name, 'we provide the best service', 599  , 'Plumbers install and repair pipes and fixtures that carry water, gas, or other fluids in homes and businesses'),
+          widget.name, 'Here homzy provide the best service', 599  , 'Plumbers install and repair pipes and fixtures that carry water, gas, or other fluids in homes and businesses'),
 
           // Divider(
           //   color: Colors.grey,
