@@ -12,24 +12,6 @@ void main() {
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
-  // final List<Image> images = [
-  //   Image.asset(
-  //     'assets/carsoul_image/salon_banner.jpeg',
-  //     fit: BoxFit.contain,
-  //   ),
-  //   Image.asset(
-  //     'assets/carsoul_image/massage_salon_men.jpeg',
-  //     fit: BoxFit.contain,
-  //   ),
-  //   Image.asset(
-  //     'assets/carsoul_image/plumber_banner.jpeg',
-  //     fit: BoxFit.contain,
-  //   ),
-  //   Image.asset(
-  //     'assets/carsoul_image/electric_banner.jpeg',
-  //     fit: BoxFit.contain,
-  //   ),
-  // ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -63,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2,)),
+                          MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2, img: Image.asset(image),)),
                         );
                       },
                       child: ClipRRect(
@@ -124,7 +106,7 @@ class HomeScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => ServiceInfo(name: name1+name2,)),
+                            MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2, img: Image.asset(image),)),
                           );
                         },
                         child: ClipRRect(
@@ -878,63 +860,21 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     SalonServiceConatiner(context,
-                        "assets/salon_men/salon_service_men.jpeg",
+                        "assets/salon_men/child_hari_cut.jpeg",
                         "Haircut ",
                         "styling"),
                     SalonServiceConatiner(context,
-                        "assets/salon_men/men_shaving.jpeg",
-                        "Shaving",
+                        "assets/salon_men/men_shaving_4.1.jpeg",
+                        "Shaving ",
                         ""),
                     SalonServiceConatiner(context,
                         "assets/salon_men/men_hair_color.jpeg",
-                        "Hair",
+                        "Hair ",
                         "coloring"),
                     SalonServiceConatiner(context,
-                        "assets/salon_men/facila_treatment.jpeg",
-                        "Facial",
+                        "assets/salon_men/facial_trement_2.0.webp",
+                        "Facial ",
                         "treatments"),
-
-                    // Container(
-                    //   color: Colors.yellow,
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.asset(
-                    //         'Assets/images/Plumber_service.png',
-                    //         fit: BoxFit.cover,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Text 1',
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(width: 10),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(10),
-                    //     color: Colors.red,
-                    //   ),
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.network(
-                    //         'https://content.jdmagicbox.com/comp/def_content/ac_repair_and_services/default-ac-repair-services-16.jpg',
-                    //         fit: BoxFit.contain,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Deep Ac Repair And Cleaning',
-                    //         textAlign: TextAlign.start,
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
@@ -946,12 +886,12 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     SalonServiceConatiner(context,
-                        "assets/salon_women/haircut.jpeg",
+                        "assets/salon_women/women_haircut_2.0.jpeg",
                         "Haircut ",
                         "styling"),
                     SalonServiceConatiner(context,
                         "assets/salon_women/hair_color.jpeg",
-                        "Hair",
+                        "Hair ",
                         "coloring"),
 
                     SalonServiceConatiner(context,
@@ -960,51 +900,8 @@ class HomeScreen extends StatelessWidget {
                         "pedicure"),
                     SalonServiceConatiner(context,
                         "assets/salon_women/glow.jpeg",
-                        "Makeup",
+                        "Makeup ",
                         ""),
-
-
-                    // Container(
-                    //   color: Colors.yellow,
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.asset(
-                    //         'Assets/images/Plumber_service.png',
-                    //         fit: BoxFit.cover,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Text 1',
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(width: 10),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(10),
-                    //     color: Colors.red,
-                    //   ),
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.network(
-                    //         'https://content.jdmagicbox.com/comp/def_content/ac_repair_and_services/default-ac-repair-services-16.jpg',
-                    //         fit: BoxFit.contain,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Deep Ac Repair And Cleaning',
-                    //         textAlign: TextAlign.start,
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
@@ -1025,17 +922,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(right: 20.0),
-                  //   child: Text(
-                  //     "View All",
-                  //     style: TextStyle(
-                  //       fontWeight: FontWeight.bold,
-                  //       fontSize: 18,
-                  //       color: Colors.purpleAccent,
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
             ),
@@ -1084,66 +970,25 @@ class HomeScreen extends StatelessWidget {
                     // ),
                     // SizedBox(width: 10),
                     ServiceCategories(context,
-                      "assets/sub_service/plumber_image/Faucet.jpeg",
+                      "assets/sub_service/plumber_image/faucet_4.1.webp",
                       "Faucet repair ",
                       "installation",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/plumber_image/piper_repair_2.0.jpeg",
+                      "assets/sub_service/plumber_image/pipe_4.1.webp",
                       "Pipe repair ",
                       "replacement",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/plumber_image/water_heater.png",
+                      "assets/sub_service/plumber_image/water_heater_3.3.jpeg",
                       "Water heater ",
                       "repair installation",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/plumber_image/water_purifier.webp",
+                      "assets/sub_service/plumber_image/water_system_3.2.jpeg",
                       "Water system ",
                       "installation",
                     ),
-                    // Container(
-                    //   color: Colors.yellow,
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.asset(
-                    //         'Assets/images/Plumber_service.png',
-                    //         fit: BoxFit.cover,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Text 1',
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(width: 10),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(10),
-                    //     color: Colors.red,
-                    //   ),
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.network(
-                    //         'https://content.jdmagicbox.com/comp/def_content/ac_repair_and_services/default-ac-repair-services-16.jpg',
-                    //         fit: BoxFit.contain,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Deep Ac Repair And Cleaning',
-                    //         textAlign: TextAlign.start,
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
@@ -1164,17 +1009,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(right: 20.0),
-                  //   child: Text(
-                  //     "View All",
-                  //     style: TextStyle(
-                  //       fontWeight: FontWeight.bold,
-                  //       fontSize: 18,
-                  //       color: Colors.purpleAccent,
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
             ),
@@ -1184,131 +1018,33 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    // Container(
-                    //   color: Colors.yellow,
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.asset(
-                    //         'Assets/images/Plumber_service.png',
-                    //         fit: BoxFit.cover,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Text 1',
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(width: 10),
-                    // Container(
-                    //   color: Colors.yellow,
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.asset(
-                    //         'Assets/images/Plumber_service.png',
-                    //         fit: BoxFit.cover,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Text 1',
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(width: 10),
                     ServiceCategories(context,
-                      "assets/sub_service/Electric_image/ac_repair.jpeg",
+                      "assets/sub_service/Electric_image/ac_repair_3.3.jpeg",
                       "Ac repair ",
                       "installation",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/Electric_image/Lighting.jpeg",
+                      "assets/sub_service/Electric_image/lighting_3.3.webp",
                       "Lighting",
                       "",
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
-                      "Refrigerator",
+                      "Refrigerator ",
                       "Repair",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/Electric_image/washing_image.jpeg",
-                      "Washing Machine",
+                      "assets/sub_service/Electric_image/washing_machine_3.2.jpeg",
+                      "Washing Machine ",
                       "repair",
                     ),
-                    // Container(
-                    //   color: Colors.yellow,
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.asset(
-                    //         'Assets/images/Plumber_service.png',
-                    //         fit: BoxFit.cover,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Text 1',
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(width: 10),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(10),
-                    //     color: Colors.red,
-                    //   ),
-                    //   height: 150,
-                    //   width: 150,
-                    //   child: Column(
-                    //     children: [
-                    //       Image.network(
-                    //         'https://content.jdmagicbox.com/comp/def_content/ac_repair_and_services/default-ac-repair-services-16.jpg',
-                    //         fit: BoxFit.contain,
-                    //       ),
-                    //       SizedBox(height: 10),
-                    //       Text(
-                    //         'Deep Ac Repair And Cleaning',
-                    //         textAlign: TextAlign.start,
-                    //         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
             ),
             //In the above need of some modification
 
-            // Container(
-            //   color: Colors.red,
-            //   height: 100,
-            //   child: Center(
-            //     child: Text(
-            //       'Container 1',
-            //       style: TextStyle(color: Colors.white),
-            //     ),
-            //   ),
-            // ),
-            // Container(
-            //   color: Colors.red,
-            //   height: 100,
-            //   child: Center(
-            //     child: Text(
-            //       'Container 1',
-            //       style: TextStyle(color: Colors.white),
-            //     ),
-            //   ),
-            // ),
+
           ],
         ),
       ),

@@ -77,26 +77,31 @@ flutter:
   - assets/carsoul_image/massage_salon_men.jpeg
   - assets/carsoul_image/plumber_banner.jpeg
   - assets/carsoul_image/electric_banner.jpeg
-  - assets/salon_men/salon_service_men.jpeg
-  - assets/salon_men/men_shaving.jpeg
+  - assets/salon_men/child_hari_cut.jpeg
+  - assets/salon_men/men_shaving_4.1.jpeg
   - assets/salon_men/men_hair_color.jpeg
   - assets/salon_men/facila_treatment.jpeg
   - assets/salon_women/manicure.webp
   - assets/salon_women/haircut.jpeg
   - assets/salon_women/hair_color.jpeg
   - assets/salon_women/glow.jpeg
-  - assets/sub_service/plumber_image/Faucet.jpeg
-  - assets/sub_service/plumber_image/pipe_repair.jpeg
+  - assets/sub_service/plumber_image/faucet_4.1.webp
+  - assets/sub_service/plumber_image/pipe_4.1.webp
   - assets/sub_service/plumber_image/water_heater.png
   - assets/sub_service/plumber_image/water_purifier.webp
-  - assets/sub_service/Electric_image/ac_repair.jpeg
-  - assets/sub_service/Electric_image/washing_image.jpeg
-  - assets/sub_service/Electric_image/Lighting.jpeg
+  - assets/sub_service/Electric_image/ac_repair_3.3.jpeg
+  - assets/sub_service/Electric_image/washing_machine_3.2.jpeg
+  - assets/sub_service/Electric_image/lighting_3.3.webp
   - assets/sub_service/Electric_image/referegator-repairing-large.jpg
   - assets/sub_service/plumber_subscreen.jpeg
   - assets/sub_service/470110063 (1).jpg
   - assets/sub_service/plumber_image/pipe_repair.jpeg
   - assets/sub_service/plumber_image/piper_repair_2.0.jpeg
+  - assets/salon_men/men_salon.jpeg
+  - assets/salon_men/facial_trement_2.0.webp
+  - assets/salon_women/women_haircut_2.0.jpeg
+  - assets/sub_service/plumber_image/water_heater_3.3.jpeg
+  - assets/sub_service/plumber_image/water_system_3.2.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -4,9 +4,11 @@ import 'package:final_homzy/small_serice/takedata_page.dart';
 
  class ServiceInfo extends StatefulWidget {
    final String name;
+   final Widget img;
    const ServiceInfo({
      Key? key,
      required this.name,
+     required this.img,
    }) : super(key: key);
 
 
@@ -113,7 +115,6 @@ class _ServiceInfoState extends State<ServiceInfo> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.white,
       // appBar: AppBar(
       //   elevation: 0.0,
       //   title: Text(""),
@@ -130,12 +131,11 @@ class _ServiceInfoState extends State<ServiceInfo> {
           Expanded(
             child: SafeArea(
               child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  image: DecorationImage(
-                    image: AssetImage('assets/sub_service/470110063 (1).jpg'),
-                    fit: BoxFit.cover,
-                  ),
+                width: double.infinity,
+                height: double.infinity,
+                child: FittedBox(
+                  fit: BoxFit.cover,
+                child: widget.img,
                 ),
               ),
             ),// As u wise use or not  by default flex is always 1
