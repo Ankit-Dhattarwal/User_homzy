@@ -5,10 +5,14 @@ import 'package:final_homzy/small_serice/takedata_page.dart';
  class ServiceInfo extends StatefulWidget {
    final String name;
    final Widget img;
+   final int price;
+   final String desc;
    const ServiceInfo({
      Key? key,
      required this.name,
      required this.img,
+     required this.price,
+     required this.desc,
    }) : super(key: key);
 
 
@@ -59,7 +63,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
                     ),
                   ],
                 ),
-                Text(price.toString(), style: TextStyle(color: Colors.black54,fontSize: 30, fontWeight: FontWeight.bold),),
+                Text('\u20B9 ${widget.price.toString()}', style: TextStyle(color: Colors.black54,fontSize: 30, fontWeight: FontWeight.bold),),
               ],
             ),
             Text('Description', style: TextStyle(fontSize: 25, color: Colors.black54,fontWeight: FontWeight.bold),),
@@ -141,7 +145,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
             ),// As u wise use or not  by default flex is always 1
           ),
           containerData(context,
-          widget.name, 'Here homzy provide the best service', 599  , 'Plumbers install and repair pipes and fixtures that carry water, gas, or other fluids in homes and businesses'),
+          widget.name, 'Here homzy provide the best service', 599  , widget.desc),
 
           // Divider(
           //   color: Colors.grey,
