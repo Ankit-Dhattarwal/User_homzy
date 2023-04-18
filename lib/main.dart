@@ -6,6 +6,7 @@ import 'package:final_homzy/small_serice/booked_service.dart';
 import 'package:final_homzy/small_serice/small_services_small_contianer .dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
 import 'package:final_homzy/small_serice/small_services_small_contianer .dart';
+import 'package:final_homzy/small_serice/small_service_small_rapair.dart';
 
 
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   }
 }
 class HomeScreen extends StatelessWidget {
-  Widget SalonServiceConatiner(BuildContext context, String image, String name1, String name2, int price, String desc){
+  Widget SalonServiceConatiner(BuildContext context, String img, String name1, String name2, int price, String desc, String image){
     return  Container(
    //   width: 200,
       child: Column(
@@ -56,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                           bottomLeft: Radius.circular(3),
                           bottomRight: Radius.circular(3),
                         ),
-                        child: Image.asset(image, height: 100, width: 100, fit: BoxFit.cover,),
+                        child: Image.asset(img, height: 100, width: 100, fit: BoxFit.cover,),
                       ),
                     ),
                   ],
@@ -88,7 +89,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-  Widget ServiceCategories(BuildContext context, String image , String name1, String name2, int price, String desc){
+  Widget ServiceCategories(BuildContext context, String img , String name1, String name2, int price, String desc, String image){
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -117,7 +118,7 @@ class HomeScreen extends StatelessWidget {
                             bottomLeft: Radius.circular(5),
                             bottomRight: Radius.circular(5),
                           ),
-                          child: Image.asset(image, height: 150, width: 150, fit: BoxFit.cover,),
+                          child: Image.asset(img, height: 150, width: 150, fit: BoxFit.cover,),
                         ),
                       ),
                     ],
@@ -182,48 +183,6 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-  Widget SmallCategoriesBasic(BuildContext context, String image, String name) {
-    return Expanded(
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => CleaningServiceScreen()),
-          );
-        },
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Color(0xFFe9e4f4),
-          ),
-          margin: EdgeInsets.only(left: 10, right: 10),
-          height: 100,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                child: Image.asset(image, height: 50, width: 50),
-              ),
-
-              SizedBox(height: 8),
-              Padding(
-                padding: EdgeInsets.all(0.5),
-                child: Center(
-                  child: Text(
-                    name,
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black54,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -276,17 +235,125 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 //    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SmallCategoriesBasic(context,
-                    "assets/images/cleaning.png",
-                    "Cleaning",
+                         Expanded(
+                               child: GestureDetector(
+                                  onTap: () {
+                               Navigator.push(
+                               context,
+                                   MaterialPageRoute(builder: (context) => CleaningServiceScreen()),
+                           );
+                  },
+                                   child: Container(
+                                    decoration: BoxDecoration(
+                                     borderRadius: BorderRadius.circular(15),
+                                    color: Color(0xFFe9e4f4),
+                              ),
+                                    margin: EdgeInsets.only(left: 10, right: 10),
+                                     height: 100,
+                                       child: Column(
+                                           mainAxisAlignment: MainAxisAlignment.center,
+                                         children: [
+                                           CircleAvatar(
+                                               child: Image.asset("assets/images/cleaning.png", height: 50, width: 50),
+                                        ),
+
+                                          SizedBox(height: 8),
+                                          Padding(
+                                             padding: EdgeInsets.all(0.5),
+                                             child: Center(
+                                               child: Text(
+                                                 "Cleaning",
+                                             style: TextStyle(
+                                              fontSize: 16,
+                                              color: Colors.black54,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+    ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CleaningServiceScreen()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Color(0xFFe9e4f4),
+                        ),
+                        margin: EdgeInsets.only(left: 10, right: 10),
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              child: Image.asset("assets/images/painting.png", height: 50, width: 50),
+                            ),
+
+                            SizedBox(height: 8),
+                            Padding(
+                              padding: EdgeInsets.all(0.5),
+                              child: Center(
+                                child: Text(
+                                  "Carpenter",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black54,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
-                  SmallCategoriesBasic(context,
-                    "assets/images/painting.png",
-                    "Painting",
-                  ),
-                  SmallCategoriesBasic(context,
-                    "assets/images/Repair.png",
-                    "Repair",
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RepairServiceScreen ()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Color(0xFFe9e4f4),
+                        ),
+                        margin: EdgeInsets.only(left: 10, right: 10),
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              child: Image.asset("assets/images/Repair.png", height: 50, width: 50),
+                            ),
+
+                            SizedBox(height: 8),
+                            Padding(
+                              padding: EdgeInsets.all(0.5),
+                              child: Center(
+                                child: Text(
+                                  "Repair",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.black54,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                   // Flexible(
                   //   child: Container(
@@ -868,33 +935,38 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    SalonServiceConatiner(context,
-                        "assets/salon_men/child_hari_cut.jpeg",
+                    SalonServiceConatiner(
+                      context,
+                        "assets/salon_men/salon_service_men.jpeg",
                         "Haircut ",
                         "styling",
                       int.parse("499"),
-                      "A men's haircut typically involves using scissors or clippers to cut the hair to a desired length or style."
+                      "A men's haircut typically involves using scissors or clippers to cut the hair to a desired length or style.",
+                      "assets/salon_men/child_hari_cut.jpeg",
                     ),
                     SalonServiceConatiner(context,
-                        "assets/salon_men/men_shaving_4.1.jpeg",
+                        "assets/salon_men/men_shaving.jpeg",
                         "Shaving ",
                         "",
                       int.parse("299"),
-                      " This can involve using shaving cream or gel to lubricate the skin and help the razor glide smoothly over the face."
+                      " This can involve using shaving cream or gel to lubricate the skin and help the razor glide smoothly over the face.",
+                      "assets/salon_men/men_shaving_4.1.jpeg",
                     ),
                     SalonServiceConatiner(context,
-                        "assets/salon_men/men_color_3.3.png",
+                        "assets/salon_men/men_hair_color.jpeg",
                         "Hair ",
                         "coloring",
                      int.parse("999"),
-                      "This can involve using a hair dye or other coloring product to add color to the hair, or to cover up gray hairs."
+                      "This can involve using a hair dye or other coloring product to add color to the hair, or to cover up gray hairs.",
+                      "assets/salon_men/men_color_3.3.png",
                     ),
                     SalonServiceConatiner(context,
-                        "assets/salon_men/facial_trement_2.0.webp",
+                        "assets/salon_men/facila_treatment.jpeg",
                         "Facial ",
                         "treatments",
                       int.parse("1249"),
-                      "A facial treatment is a skincare procedure designed to improve the appearance and health of a man's facial skin."
+                      "A facial treatment is a skincare procedure designed to improve the appearance and health of a man's facial skin.",
+                      "assets/salon_men/facial_trement_2.0.webp",
                     ),
                   ],
                 ),
@@ -907,33 +979,37 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     SalonServiceConatiner(context,
-                        "assets/salon_women/hair_cutt_women_5.2.jpeg",
+                        "assets/salon_women/haircut.jpeg",
                         "Haircut ",
                         "styling",
                       int.parse("699"),
-                      "This can include cutting the hair to a certain length or style, as well as shaping the hair around the face, sides, and back of the head."
+                      "This can include cutting the hair to a certain length or style, as well as shaping the hair around the face, sides, and back of the head.",
+                      "assets/salon_women/hair_cutt_women_5.2.jpeg",
                     ),
                     SalonServiceConatiner(context,
-                        "assets/salon_women/coloring hair_women_sec.jpeg",
+                        "assets/salon_women/hair_color.jpeg",
                         "Hair ",
                         "coloring",
                       int.parse("1549"),
-                      "This can involve using a hair dye or other coloring product to add color to the hair, or to cover up gray hairs."
+                      "This can involve using a hair dye or other coloring product to add color to the hair, or to cover up gray hairs.",
+                      "assets/salon_women/coloring hair_women_sec.jpeg",
                     ),
 
                     SalonServiceConatiner(context,
-                        "assets/salon_women/manicure_3.1.jpeg",
+                        "assets/salon_women/manicure.webp",
                         "Manicure ",
                         "pedicure",
                       int.parse("599"),
-                      "Manicure and pedicure treatments are procedures designed to improve the appearance and health of a woman's hands, feet, and nails."
+                      "Manicure and pedicure treatments are procedures designed to improve the appearance and health of a woman's hands, feet, and nails.",
+                      "assets/salon_women/manicure_3.1.jpeg",
                     ),
                     SalonServiceConatiner(context,
-                        "assets/salon_women/makup_women_3.1.webp",
+                        "assets/salon_women/glow.jpeg",
                         "Makeup ",
                         "",
                         int.parse("5999"),
                         "This can include makeup for special events or occasions, such as photo shoots, or everyday makeup for work or social situations.",
+                      "assets/salon_women/makup_women_3.1.webp",
                     ),
                   ],
                 ),
@@ -1003,32 +1079,37 @@ class HomeScreen extends StatelessWidget {
                     // ),
                     // SizedBox(width: 10),
                     ServiceCategories(context,
-                      "assets/sub_service/plumber_image/faucet_4.1.webp",
+                      "assets/sub_service/plumber_image/Faucet.jpeg",
                       "Faucet repair ",
                       "installation",
                       int.parse("599"),
-                      "Faucet repair and installation involve fixing or installing the plumbing fixture that controls the flow of water in a sink, bathtub, or shower."
+                      "Faucet repair and installation involve fixing or installing the plumbing fixture that controls the flow of water in a sink, bathtub, or shower.",
+                      "assets/sub_service/plumber_image/faucet_4.1.webp",
                     ),
+
                     ServiceCategories(context,
-                      "assets/sub_service/plumber_image/pipe_4.1.webp",
+                      "assets/sub_service/plumber_image/piper_repair_2.0.jpeg",
                       "Pipe repair ",
                       "replacement",
                         int.parse("899"),
-                      "Pipe repair involves fixing or replacing damaged pipes that carry water, gas, or other fluids throughout a building."
+                      "Pipe repair involves fixing or replacing damaged pipes that carry water, gas, or other fluids throughout a building.",
+                      "assets/sub_service/plumber_image/pipe_4.1.webp",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/plumber_image/water_heater_3.3.jpeg",
+                      "assets/sub_service/plumber_image/water_heater.png",
                       "Water heater ",
                       "repair installation",
                         int.parse("799"),
-                      "Water heater repair and installation involve fixing or installing the system that provides hot water to a building."
+                      "Water heater repair and installation involve fixing or installing the system that provides hot water to a building.",
+                      "assets/sub_service/plumber_image/water_heater_3.3.jpeg",
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/plumber_image/water_system_3.2.jpeg",
                       "Water system ",
                       "installation",
                         int.parse("999"),
-                      "Water system repair and installation involve fixing or installing the plumbing system that provides potable water to a building."
+                      "Water system repair and installation involve fixing or installing the plumbing system that provides potable water to a building.",
+                      "assets/sub_service/plumber_image/water_system_3.2.jpeg",
                     ),
                   ],
                 ),
@@ -1060,32 +1141,36 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     ServiceCategories(context,
-                      "assets/sub_service/Electric_image/ac_repair_3.3.jpeg",
+                      "assets/sub_service/Electric_image/ac_repair.jpeg",
                       "Ac repair ",
                       "installation",
-                        int.parse("899"),
-                      "This can include repairing or replacing damaged components such as the compressor, condenser, or refrigerant lines, or cleaning and tuning up the system to improve its efficiency and performance."
+                      int.parse("899"),
+                      "This can include repairing or replacing damaged components such as the compressor, condenser, or refrigerant lines, or cleaning and tuning up the system to improve its efficiency and performance.",
+                      "assets/sub_service/Electric_image/ac_repair_3.3.jpeg",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/Electric_image/lighting_3.3.webp",
+                      "assets/sub_service/Electric_image/Lighting.jpeg",
                       "Lighting",
                       "",
                         int.parse("699"),
-                      "This can include repairing or replacing damaged components such as light fixtures, switches, or wiring, or installing new lighting altogether."
+                      "This can include repairing or replacing damaged components such as light fixtures, switches, or wiring, or installing new lighting altogether.",
+                      "assets/sub_service/Electric_image/lighting_3.3.webp",
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
                       "Refrigerator ",
                       "Repair",
                         int.parse("1299"),
-                      "This can include repairing or replacing damaged components such as the compressor, condenser, or evaporator fan, or cleaning and tuning up the system to improve its efficiency and performance."
+                      "This can include repairing or replacing damaged components such as the compressor, condenser, or evaporator fan, or cleaning and tuning up the system to improve its efficiency and performance.",
+                      "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
                     ),
                     ServiceCategories(context,
-                      "assets/sub_service/Electric_image/washing_machine_3.2.jpeg",
+                      "assets/sub_service/Electric_image/washing_image.jpg",
                       "Washing Machine ",
                       "repair",
                         int.parse("5999"),
-                      "This can include repairing or replacing damaged components such as the motor, belts, or agitator, or cleaning and tuning up the machine to improve its efficiency and performance. "
+                      "This can include repairing or replacing damaged components such as the motor, belts, or agitator, or cleaning and tuning up the machine to improve its efficiency and performance.",
+                      "assets/sub_service/Electric_image/washing_machine_3.2.jpeg",
                     ),
                   ],
                 ),

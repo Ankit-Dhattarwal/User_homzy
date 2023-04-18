@@ -74,6 +74,20 @@ flutter:
   - assets/images/painting.png
   - assets/images/Repair.png
   - assets/carsoul_image/salon_banner.jpeg
+  - assets/salon_men/salon_service_men.jpeg
+  - assets/salon_men/men_shaving.jpeg
+  - assets/salon_men/men_hair_color.jpeg
+  - assets/salon_men/facila_treatment.jpeg
+  - assets/salon_women/haircut.jpeg
+  - assets/salon_women/hair_color.jpeg
+  - assets/salon_women/manicure.webp
+  - assets/salon_women/glow.jpeg
+  - assets/sub_service/plumber_image/Faucet.jpeg
+  - assets/sub_service/plumber_image/piper_repair_2.0.jpeg
+  - assets/sub_service/plumber_image/water_heater.png
+  - assets/sub_service/Electric_image/ac_repair.jpeg
+  - assets/sub_service/Electric_image/Lighting.jpeg
+  - assets/sub_service/Electric_image/washing_image.jpg
   - assets/carsoul_image/massage_salon_men.jpeg
   - assets/carsoul_image/plumber_banner.jpeg
   - assets/carsoul_image/electric_banner.jpeg
@@ -103,6 +117,29 @@ flutter:
   - assets/salon_women/women_haircut_2.0.jpeg
   - assets/sub_service/plumber_image/water_heater_3.3.jpeg
   - assets/sub_service/plumber_image/water_system_3.2.jpeg
+  - assets/cleaning_service/bathroom_cleaning.jpeg
+  - assets/cleaning_service/kitchen_cleaning.jpeg
+  - assets/cleaning_service/sofa_cleaning.jpeg
+  - assets/cleaning_service/carpet_cleaning.webp
+  - assets/cleaning_service/1_room_set_cleaning.jpeg
+  - assets/cleaning_service/garden claening.jpeg
+  - assets/cleaning_service/bathroom_cleaning_poster.jpeg
+  - assets/cleaning_service/kitchen_cleaner_poster.jpeg
+  - assets/cleaning_service/garden_cleaner_poster.jpeg
+  - assets/cleaning_service/carpet_cleaner_poster.jpeg
+  - assets/cleaning_service/sofa_cleaner_poster.jpeg
+  - assets/repair_serivce/switch_repair.jpeg
+  - assets/repair_serivce/ovens_stoves_repair.jpeg
+  - assets/repair_serivce/vaccum_cleaners.jpeg
+  - assets/repair_serivce/fan_repair.webp
+  - assets/repair_serivce/electrical-wiring.jpeg
+  - assets/repair_serivce/wire_repair_2.3.jpeg
+  - assets/repair_serivce/vacuum_poster.jpeg
+  - assets/repair_serivce/fan_poster.webp
+  - assets/repair_serivce/stove_poster.jpeg
+  - assets/repair_serivce/stove_poster_2.1.jpeg
+  - assets/repair_serivce/switch_poster.jpeg
+  - assets/repair_serivce/electric_main.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
