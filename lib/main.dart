@@ -7,6 +7,9 @@ import 'package:final_homzy/small_serice/small_services_small_contianer .dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
 import 'package:final_homzy/small_serice/small_services_small_contianer .dart';
 import 'package:final_homzy/small_serice/small_service_small_rapair.dart';
+import 'package:final_homzy/small_serice/small_service_carpenter.dart';
+import 'package:final_homzy/small_serice/face_care.dart';
+import 'package:final_homzy/small_serice/face_care_men.dart';
 
 
 
@@ -149,40 +152,6 @@ class HomeScreen extends StatelessWidget {
       ],
     );
   }
-  Widget SmallCategories(BuildContext context , String image , String name){
-    return  Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Color(0xFFe9e4f4),
-        ),
-        margin: EdgeInsets.only(left: 10, right: 10),
-        height: 100,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              child: Image.asset(image, height: 50, width: 50),
-            ),
-            SizedBox(height: 8),
-            Padding(
-              padding: EdgeInsets.all(0.5),
-              child: Center(child:
-              Text(name,
-                style:
-                TextStyle(fontSize: 16,
-                  color:
-                  Colors.black54,
-                ),
-              ),
-              ),
-            ),
-          ],
-        ),
-
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -218,15 +187,85 @@ class HomeScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                SmallCategories(
-                  context,
-                  "assets/images/spa.png",
-                  "Face Care",
+                Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => FaceWomenServiceScreen()),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Color(0xFFe9e4f4),
+                        ),
+                        margin: EdgeInsets.only(left: 10, right: 10),
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              child: Image.asset("assets/images/spa.png", height: 50, width: 50),
+                            ),
+                            SizedBox(height: 8),
+                            Padding(
+                              padding: EdgeInsets.all(0.5),
+                              child: Center(child:
+                              Text("Face Care",
+                                style:
+                                TextStyle(fontSize: 16,
+                                  color:
+                                  Colors.black54,
+                                ),
+                              ),
+                              ),
+                            ),
+                          ],
+                        ),
+
+                      ),
+                    )
                 ),
-                SmallCategories(
-                  context,
-                  "assets/images/massage.png",
-                  "Face Care",
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FaceMenServiceScreen()),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Color(0xFFe9e4f4),
+                      ),
+                      margin: EdgeInsets.only(left: 10, right: 10),
+                      height: 100,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CircleAvatar(
+                            child: Image.asset("assets/images/massage.png", height: 50, width: 50),
+                          ),
+                          SizedBox(height: 8),
+                          Padding(
+                            padding: EdgeInsets.all(0.5),
+                            child: Center(child:
+                            Text("Face Care",
+                              style:
+                              TextStyle(fontSize: 16,
+                                color:
+                                Colors.black54,
+                              ),
+                            ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                    ),
+                  )
                 ),
               ],
             ),
@@ -280,7 +319,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => CleaningServiceScreen()),
+                          MaterialPageRoute(builder: (context) => CarpenterServiceScreen()),
                         );
                       },
                       child: Container(

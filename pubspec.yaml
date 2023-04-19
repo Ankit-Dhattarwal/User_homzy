@@ -140,7 +140,24 @@ flutter:
   - assets/repair_serivce/stove_poster_2.1.jpeg
   - assets/repair_serivce/switch_poster.jpeg
   - assets/repair_serivce/electric_main.webp
-
+  - assets/carpenter_service/door_repair.jpeg
+  - assets/carpenter_service/door_repaair_poster.jpg
+  - assets/carpenter_service/floor_reapir_poster.jpg
+  - assets/carpenter_service/roof_repair.jpeg
+  - assets/carpenter_service/cabinet_reapir.jpeg
+  - assets/carpenter_service/cabinet_reapir_poster.webp
+  - assets/carpenter_service/window_reapir.jpeg
+  - assets/carpenter_service/window_repair_poster.jpeg
+  - assets/carpenter_service/carpenter_main.jpeg
+  - assets/face_care_for_women/eyebrow_poster.jpeg
+  - assets/face_care_for_women/poster_eyebrow.jpeg
+  - assets/face_care_for_women/eyebrow_2.2.jpeg
+  - assets/face_care_for_women/eyebrow_poster_2.2.jpeg
+  - assets/face_care_for_women/facial_cleaning.jpeg
+  - assets/face_care_for_women/facial_poster.jpeg
+  - assets/face_care_for_women/exfoliation_poster.webp
+  - assets/face_care_for_women/makup_2.2.jpeg
+  - assets/face_care_for_women/makup_poster.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
