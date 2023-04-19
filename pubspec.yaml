@@ -158,6 +158,10 @@ flutter:
   - assets/face_care_for_women/exfoliation_poster.webp
   - assets/face_care_for_women/makup_2.2.jpeg
   - assets/face_care_for_women/makup_poster.jpeg
+  - assets/face_care_men/beard_grooming.jpeg
+  - assets/face_care_men/beard_grooming_poster.jpeg
+  - assets/face_care_men/facial_for_men.jpeg
+  - assets/face_care_men/facial_poster.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
