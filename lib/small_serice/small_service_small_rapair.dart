@@ -76,7 +76,7 @@ class RepairServiceScreen extends StatelessWidget {
                   "assets/repair_serivce/switch_repair.jpeg",
                   "Switch repair",
                   "assets/repair_serivce/switch_poster.jpeg",
-                  int.parse("399"),
+                  int.parse("150"),
                   "Our expert technicians can repair any issues with your switches, whether it's a flickering light or a faulty switch."
               ),
               SmallService(context,
@@ -90,21 +90,21 @@ class RepairServiceScreen extends StatelessWidget {
                   "assets/repair_serivce/vaccum_cleaners.jpeg",
                   "vaccum repair",
                   "assets/repair_serivce/vacuum_poster.jpeg",
-                  int.parse("499"),
+                  int.parse("299"),
                   "Our expert technicians can repair any issues with your vacuum, from suction problems to broken belts."
               ),
               SmallService(context,
                   "assets/repair_serivce/fan_repair.webp",
                   "Fan repair",
                   "assets/repair_serivce/fan_poster.webp",
-                  int.parse("749"),
+                  int.parse("250"),
                   "Our fan repair services include a thorough inspection of your fan to diagnose the issue and provide you with a comprehensive repair plan."
               ),
               SmallService(context,
                   "assets/repair_serivce/electrical-wiring.jpeg",
                   "Electric wire repair",
                   "assets/repair_serivce/wire_repair_2.3.jpeg",
-                  int.parse("4555"),
+                  int.parse("800"),
                   "We offer reliable and affordable wire repair services for all types of electrical wiring systems."
               ),
             ],

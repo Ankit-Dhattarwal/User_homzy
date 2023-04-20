@@ -17,6 +17,26 @@ void main() {
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
+
+  // final List<Image> carsolImages = [
+  //   Image.asset(
+  //     'assets/carsoul_image/salon_banner.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  //   Image.asset(
+  //     'assets/carsoul_image/massage_salon_men.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  //   Image.asset(
+  //     'assets/carsoul_image/plumber_banner.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  //   Image.asset(
+  //     'assets/carsoul_image/electric_banner.jpeg',
+  //     fit: BoxFit.contain,
+  //   ),
+  // ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -442,16 +462,16 @@ class HomeScreen extends StatelessWidget {
             //     autoplay: true,
             //     animationCurve: Curves.fastOutSlowIn,
             //     animationDuration: Duration(milliseconds: 1000),
-            //     images: images,
+            //     images: carsolImages,
             //     indicatorBgPadding: 5.0,
             //     borderRadius: false,
             //   ),
             // ),
+
             // SizedBox(
             //   height: 10,
-            // ),  // carsoul    // carsoual
+            // ), // carsoul    // carsoual
 
-            // carsoual bar here.
             // Row(
             //   children: [
             //     Expanded(
@@ -979,7 +999,7 @@ class HomeScreen extends StatelessWidget {
                         "assets/salon_men/salon_service_men.jpeg",
                         "Haircut ",
                         "styling",
-                      int.parse("499"),
+                      int.parse("299"),
                       "A men's haircut typically involves using scissors or clippers to cut the hair to a desired length or style.",
                       "assets/salon_men/child_hari_cut.jpeg",
                     ),
@@ -987,7 +1007,7 @@ class HomeScreen extends StatelessWidget {
                         "assets/salon_men/men_shaving.jpeg",
                         "Shaving ",
                         "",
-                      int.parse("299"),
+                      int.parse("149"),
                       " This can involve using shaving cream or gel to lubricate the skin and help the razor glide smoothly over the face.",
                       "assets/salon_men/men_shaving_4.1.jpeg",
                     ),
@@ -1003,7 +1023,7 @@ class HomeScreen extends StatelessWidget {
                         "assets/salon_men/facila_treatment.jpeg",
                         "Facial ",
                         "treatments",
-                      int.parse("1249"),
+                      int.parse("599"),
                       "A facial treatment is a skincare procedure designed to improve the appearance and health of a man's facial skin.",
                       "assets/salon_men/facial_trement_2.0.webp",
                     ),
@@ -1021,7 +1041,7 @@ class HomeScreen extends StatelessWidget {
                         "assets/salon_women/haircut.jpeg",
                         "Haircut ",
                         "styling",
-                      int.parse("699"),
+                      int.parse("499"),
                       "This can include cutting the hair to a certain length or style, as well as shaping the hair around the face, sides, and back of the head.",
                       "assets/salon_women/hair_cutt_women_5.2.jpeg",
                     ),
@@ -1029,7 +1049,7 @@ class HomeScreen extends StatelessWidget {
                         "assets/salon_women/hair_color.jpeg",
                         "Hair ",
                         "coloring",
-                      int.parse("1549"),
+                      int.parse("2549"),
                       "This can involve using a hair dye or other coloring product to add color to the hair, or to cover up gray hairs.",
                       "assets/salon_women/coloring hair_women_sec.jpeg",
                     ),
@@ -1046,7 +1066,7 @@ class HomeScreen extends StatelessWidget {
                         "assets/salon_women/glow.jpeg",
                         "Makeup ",
                         "",
-                        int.parse("5999"),
+                        int.parse("8999"),
                         "This can include makeup for special events or occasions, such as photo shoots, or everyday makeup for work or social situations.",
                       "assets/salon_women/makup_women_3.1.webp",
                     ),
@@ -1121,7 +1141,7 @@ class HomeScreen extends StatelessWidget {
                       "assets/sub_service/plumber_image/Faucet.jpeg",
                       "Faucet repair ",
                       "installation",
-                      int.parse("599"),
+                      int.parse("250"),
                       "Faucet repair and installation involve fixing or installing the plumbing fixture that controls the flow of water in a sink, bathtub, or shower.",
                       "assets/sub_service/plumber_image/faucet_4.1.webp",
                     ),
@@ -1130,7 +1150,7 @@ class HomeScreen extends StatelessWidget {
                       "assets/sub_service/plumber_image/piper_repair_2.0.jpeg",
                       "Pipe repair ",
                       "replacement",
-                        int.parse("899"),
+                        int.parse("350"),
                       "Pipe repair involves fixing or replacing damaged pipes that carry water, gas, or other fluids throughout a building.",
                       "assets/sub_service/plumber_image/pipe_4.1.webp",
                     ),
@@ -1146,7 +1166,7 @@ class HomeScreen extends StatelessWidget {
                       "assets/sub_service/plumber_image/water_system_3.2.jpeg",
                       "Water system ",
                       "installation",
-                        int.parse("999"),
+                        int.parse("1000"),
                       "Water system repair and installation involve fixing or installing the plumbing system that provides potable water to a building.",
                       "assets/sub_service/plumber_image/water_system_3.2.jpeg",
                     ),
@@ -1183,7 +1203,7 @@ class HomeScreen extends StatelessWidget {
                       "assets/sub_service/Electric_image/ac_repair.jpeg",
                       "Ac repair ",
                       "installation",
-                      int.parse("899"),
+                      int.parse("599"),
                       "This can include repairing or replacing damaged components such as the compressor, condenser, or refrigerant lines, or cleaning and tuning up the system to improve its efficiency and performance.",
                       "assets/sub_service/Electric_image/ac_repair_3.3.jpeg",
                     ),
@@ -1191,7 +1211,7 @@ class HomeScreen extends StatelessWidget {
                       "assets/sub_service/Electric_image/Lighting.jpeg",
                       "Lighting",
                       "",
-                        int.parse("699"),
+                        int.parse("350"),
                       "This can include repairing or replacing damaged components such as light fixtures, switches, or wiring, or installing new lighting altogether.",
                       "assets/sub_service/Electric_image/lighting_3.3.webp",
                     ),
@@ -1199,7 +1219,7 @@ class HomeScreen extends StatelessWidget {
                       "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
                       "Refrigerator ",
                       "Repair",
-                        int.parse("1299"),
+                        int.parse("169"),
                       "This can include repairing or replacing damaged components such as the compressor, condenser, or evaporator fan, or cleaning and tuning up the system to improve its efficiency and performance.",
                       "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
                     ),
@@ -1207,7 +1227,7 @@ class HomeScreen extends StatelessWidget {
                       "assets/sub_service/Electric_image/washing_image.jpg",
                       "Washing Machine ",
                       "repair",
-                        int.parse("5999"),
+                        int.parse("150"),
                       "This can include repairing or replacing damaged components such as the motor, belts, or agitator, or cleaning and tuning up the machine to improve its efficiency and performance.",
                       "assets/sub_service/Electric_image/washing_machine_3.2.jpeg",
                     ),

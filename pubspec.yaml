@@ -37,8 +37,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  carousel_pro: ^1.0.0
   font_awesome_flutter: ^9.2.0
+  carousel_pro: ^1.0.0
 
 
 dev_dependencies:
@@ -162,6 +162,14 @@ flutter:
   - assets/face_care_men/beard_grooming_poster.jpeg
   - assets/face_care_men/facial_for_men.jpeg
   - assets/face_care_men/facial_poster.jpeg
+  - assets/face_care_men/threading_men.webp
+  - assets/face_care_men/face_care_men.jpeg
+  - assets/face_care_for_women/women_face_wash.webp
+  - assets/face_care_men/grooming-mens-eyebrows_poster-PhotoRoom.webp
+  - assets/carsoul_image/salon_banner.jpeg
+  - assets/carsoul_image/massage_salon_men.jpeg
+  - assets/carsoul_image/plumber_banner.jpeg
+  - assets/carsoul_image/electric_banner.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

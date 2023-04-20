@@ -66,7 +66,7 @@ class FaceWomenServiceScreen extends StatelessWidget {
                   height: 200,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/carpenter_service/carpenter_main.jpeg"),
+                      image: AssetImage("assets/face_care_for_women/women_face_wash.webp"),
                       fit: BoxFit.cover,
                     ),
                   ),

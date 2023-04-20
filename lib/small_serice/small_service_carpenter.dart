@@ -83,7 +83,7 @@ class CarpenterServiceScreen extends StatelessWidget {
                   "assets/carpenter_service/roof_repair.jpeg",
                   "floor repair",
                   "assets/carpenter_service/floor_reapir_poster.jpg",
-                  int.parse("399"),
+                  int.parse("999"),
                   "We use high-quality materials and modern equipment to efficiently assess, repair, and protect your floors while prioritizing customer satisfaction with our quality workmanship and professionalism."
               ),
               SmallService(context,
@@ -97,7 +97,7 @@ class CarpenterServiceScreen extends StatelessWidget {
                   "assets/carpenter_service/window_reapir.jpeg",
                   "Window repair",
                   "assets/carpenter_service/window_repair_poster.jpeg",
-                  int.parse("749"),
+                  int.parse("449"),
                   "We use high-quality materials and modern equipment to efficiently diagnose and repair any window issue while prioritizing customer satisfaction with our professional service and commitment to excellence."
               ),
             ],
