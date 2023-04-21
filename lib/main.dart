@@ -1212,7 +1212,7 @@ class HomeScreen extends StatelessWidget {
                       "Lighting",
                       "",
                         int.parse("350"),
-                      "This can include repairing or replacing damaged components such as light fixtures, switches, or wiring, or installing new lighting altogether.",
+                      "This can include repairing or replacing damaged components such as light fixtures, switches, or wiring, installing new lighting altogether.",
                       "assets/sub_service/Electric_image/lighting_3.3.webp",
                     ),
                     ServiceCategories(context,
