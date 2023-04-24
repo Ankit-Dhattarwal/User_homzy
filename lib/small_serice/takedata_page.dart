@@ -6,10 +6,12 @@ import 'package:final_homzy/main.dart';
 class LocationScreen extends StatefulWidget {
   final String name;
   final int price;
+  final String desc;
   const LocationScreen({
     Key? key,
     required this.name,
     required this.price,
+    required this.desc,
   }) : super(key: key);
 
 

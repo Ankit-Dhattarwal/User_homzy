@@ -23,7 +23,7 @@ import 'package:final_homzy/small_serice/small_services_small_contianer .dart';
 }
 
 class _ServiceInfoState extends State<ServiceInfo> {
-  Widget containerData(BuildContext context, String serviceName, String line, int price , String descData){
+  Widget containerData(BuildContext context, String serviceName, String line, int price , String desc){
     return Expanded(
       flex: 2,
       child: Container(
@@ -69,7 +69,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
             ),
             Text('Description', style: TextStyle(fontSize: 25, color: Colors.black54,fontWeight: FontWeight.bold),),
 
-            Text(descData,
+            Text(desc,
               style: TextStyle(color: Colors.black54, fontSize: 20),
             ),
 
@@ -100,7 +100,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
                         // Navigate to a new screen
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => LocationScreen(name: serviceName, price: price,)),
+                          MaterialPageRoute(builder: (context) => LocationScreen(name: serviceName, price: price,desc: desc,)),
                         );
                       },
                       child:Text('Book', style: TextStyle(fontSize: 20, color: Colors.black),),
