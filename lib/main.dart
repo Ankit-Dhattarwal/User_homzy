@@ -10,6 +10,7 @@ import 'package:final_homzy/small_serice/small_service_small_rapair.dart';
 import 'package:final_homzy/small_serice/small_service_carpenter.dart';
 import 'package:final_homzy/small_serice/face_care.dart';
 import 'package:final_homzy/small_serice/face_care_men.dart';
+import 'package:final_homzy/small_serice/takedata_page.dart';
 
 
 
