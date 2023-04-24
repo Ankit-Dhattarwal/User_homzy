@@ -13,26 +13,13 @@ class Payid extends StatelessWidget {
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () => Navigator.pop(context),
           ),
+          title: Text('Payment', style: TextStyle(fontSize: 25),),
           // other properties like title, actions, etc.
         ),
 
         body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(10),
-              width: double.infinity,
-              height: 100,
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Payment',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
             Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
