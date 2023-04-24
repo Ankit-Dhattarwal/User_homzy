@@ -100,7 +100,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
                         // Navigate to a new screen
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => LocationScreen()),
+                          MaterialPageRoute(builder: (context) => LocationScreen(name: serviceName, price: price,)),
                         );
                       },
                       child:Text('Book', style: TextStyle(fontSize: 20, color: Colors.black),),
