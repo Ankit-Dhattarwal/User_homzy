@@ -89,39 +89,39 @@ class SubSetting extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20.0),
-          Container(
-            height: 60.0,
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.payment,
-                      color: Colors.purpleAccent,
-                      size: 50.0,
-                    ),
-                    SizedBox(width: 10.0),
-                    Text(
-                      "Payment",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 23.0,
-                      ),
-                    ),
-                  ],
-                ),
-                Spacer(),
-                Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colors.black,
-                  size: 24.0,
-                ),
-              ],
-            ),
-          ),
+          // SizedBox(height: 20.0),
+          // Container(
+          //   height: 60.0,
+          //   padding: EdgeInsets.symmetric(horizontal: 16.0),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //     children: [
+          //       Row(
+          //         children: [
+          //           Icon(
+          //             Icons.payment,
+          //             color: Colors.purpleAccent,
+          //             size: 50.0,
+          //           ),
+          //           SizedBox(width: 10.0),
+          //           Text(
+          //             "Payment",
+          //             style: TextStyle(
+          //               color: Colors.black,
+          //               fontSize: 23.0,
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //       Spacer(),
+          //       Icon(
+          //         Icons.arrow_forward_ios,
+          //         color: Colors.black,
+          //         size: 24.0,
+          //       ),
+          //     ],
+          //   ),
+          // ),
           SizedBox(height: 20.0),
           Container(
             height: 60.0,

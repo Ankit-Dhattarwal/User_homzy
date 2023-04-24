@@ -170,6 +170,11 @@ flutter:
   - assets/carsoul_image/massage_salon_men.jpeg
   - assets/carsoul_image/plumber_banner.jpeg
   - assets/carsoul_image/electric_banner.jpeg
+  - assets/payment_icon/cash_pay-removebg-preview.png
+  - assets/payment_icon/google_pay.webp
+  - assets/payment_icon/google_pay_3.3-removebg-preview.png
+  - assets/payment_icon/master_card-removebg-preview.png
+  - assets/payment_icon/phone_pay-removebg-preview.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

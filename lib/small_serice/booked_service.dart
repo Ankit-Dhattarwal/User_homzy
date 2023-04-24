@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:final_homzy/main.dart';
+import 'package:final_homzy/payment_screen/payment_subPage.dart';
 
 class bookSubPage extends StatelessWidget {
   @override
@@ -129,6 +131,37 @@ class bookSubPage extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Payid()),
+                  );
+                },
+                child: Center(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.greenAccent,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    width: 200,
+                    height: 40,
+                    child: Center(
+                      child: Text('Confirm and pay'),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.grey,
               ),
             ],
           ),
