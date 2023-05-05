@@ -91,7 +91,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     child: Text('Submit'),
                   ),
                 ),
-                Text('${widget.Time}'),
+                // Text('${widget.Time}'),
               ],
             ),
           ],
