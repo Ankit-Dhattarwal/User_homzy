@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
 
 class RepairServiceScreen extends StatelessWidget {
-  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc){
+  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc, int Time){
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc,)),
+          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc,Time: Time,)),
         );
       },
 
@@ -77,35 +77,40 @@ class RepairServiceScreen extends StatelessWidget {
                   "Switch repair",
                   "assets/repair_serivce/switch_poster.jpeg",
                   int.parse("150"),
-                  "Our expert technicians can repair any issues with your switches, whether it's a flickering light or a faulty switch."
+                  "Our expert technicians can repair any issues with your switches, whether it's a flickering light or a faulty switch.",
+                int.parse("25"),
               ),
               SmallService(context,
                   "assets/repair_serivce/ovens_stoves_repair.jpeg",
                   "Stoves repair",
                   "assets/repair_serivce/stove_poster_2.1.jpeg",
                   int.parse("399"),
-                  "Our expert technicians can repair any issues with your stove, from faulty burners to broken heating elements."
+                  "Our expert technicians can repair any issues with your stove, from faulty burners to broken heating elements.",
+                int.parse("60"),
               ),
               SmallService(context,
                   "assets/repair_serivce/vaccum_cleaners.jpeg",
                   "vaccum repair",
                   "assets/repair_serivce/vacuum_poster.jpeg",
                   int.parse("299"),
-                  "Our expert technicians can repair any issues with your vacuum, from suction problems to broken belts."
+                  "Our expert technicians can repair any issues with your vacuum, from suction problems to broken belts.",
+                int.parse("45"),
               ),
               SmallService(context,
                   "assets/repair_serivce/fan_repair.webp",
                   "Fan repair",
                   "assets/repair_serivce/fan_poster.webp",
                   int.parse("250"),
-                  "Our fan repair services include a thorough inspection of your fan to diagnose the issue and provide you with a comprehensive repair plan."
+                  "Our fan repair services include a thorough inspection of your fan to diagnose the issue and provide you with a comprehensive repair plan.",
+                int.parse("50"),
               ),
               SmallService(context,
                   "assets/repair_serivce/electrical-wiring.jpeg",
                   "Electric wire repair",
                   "assets/repair_serivce/wire_repair_2.3.jpeg",
                   int.parse("800"),
-                  "We offer reliable and affordable wire repair services for all types of electrical wiring systems."
+                  "We offer reliable and affordable wire repair services for all types of electrical wiring systems.",
+                int.parse('120'),
               ),
             ],
           ),

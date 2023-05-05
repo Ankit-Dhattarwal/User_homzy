@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
 
 class FaceWomenServiceScreen extends StatelessWidget {
-  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc){
+  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc, int Time){
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc,)),
+          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc, Time: Time,)),
         );
       },
 
@@ -77,21 +77,24 @@ class FaceWomenServiceScreen extends StatelessWidget {
                   "Eyebrow",
                   "assets/face_care_for_women/eyebrow_poster_2.2.jpeg",
                   int.parse("399"),
-                  "Our eyebrow home service provides precise and personalized eyebrow shaping to enhance the natural shape and balance of the face, using high-quality products and techniques to create a polished and professional look."
+                  "Our eyebrow home service provides precise and personalized eyebrow shaping to enhance the natural shape and balance of the face, using high-quality products and techniques to create a polished and professional look.",
+                int.parse("15"),
               ),
               SmallService(context,
                   "assets/face_care_for_women/facial_cleaning.jpeg",
                   "Facial",
                   "assets/face_care_for_women/exfoliation_poster.webp",
                   int.parse("399"),
-                  "Our facial home service offers a range of personalized facial treatments using high-quality products and specialized techniques to cleanse, exfoliate, and nourish the skin for a refreshed and rejuvenated appearance."
+                  "Our facial home service offers a range of personalized facial treatments using high-quality products and specialized techniques to cleanse, exfoliate, and nourish the skin for a refreshed and rejuvenated appearance.",
+                int.parse("35"),
               ),
               SmallService(context,
                   "assets/face_care_for_women/makup_2.2.jpeg",
                   "Makeup",
                   "assets/face_care_for_women/makup_poster.jpeg",
                   int.parse("499"),
-                  "Our professional makeup artists provide personalized makeup application using high-quality products and tools to enhance your natural beauty and create the perfect look for any occasion."
+                  "Our professional makeup artists provide personalized makeup application using high-quality products and tools to enhance your natural beauty and create the perfect look for any occasion.",
+                int.parse("150"),
               ),
             ],
           ),

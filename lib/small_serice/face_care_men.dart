@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
 
 class FaceMenServiceScreen extends StatelessWidget {
-  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc){
+  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc, int Time){
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc,)),
+          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc, Time: Time,)),
         );
       },
 
@@ -77,21 +77,24 @@ class FaceMenServiceScreen extends StatelessWidget {
                   "beardGrooming",
                   "assets/face_care_men/beard_grooming_poster.jpeg",
                   int.parse("399"),
-                  "Beard grooming is the process of maintaining and enhancing the appearance and health of one's facial hair through regular cleaning, trimming, and conditioning."
+                  "Beard grooming is the process of maintaining and enhancing the appearance and health of one's facial hair through regular cleaning, trimming, and conditioning.",
+                int.parse("25"),
               ),
               SmallService(context,
                   "assets/face_care_men/facial_for_men.jpeg",
                   "Facial",
                   "assets/face_care_men/facial_poster.jpeg",
                   int.parse("399"),
-                  "Our facial home service offers a range of personalized facial treatments using high-quality products and specialized techniques to cleanse, exfoliate, and nourish the skin for a refreshed and rejuvenated appearance."
+                  "Our facial home service offers a range of personalized facial treatments using high-quality products and specialized techniques to cleanse, exfoliate, and nourish the skin for a refreshed and rejuvenated appearance.",
+                int.parse("30"),
               ),
               SmallService(context,
                   "assets/face_care_men/threading_men.webp",
                   "Threading",
                   "assets/face_care_men/grooming-mens-eyebrows_poster-PhotoRoom.webp",
                   int.parse("499"),
-                  "Threading for men is a hair removal technique that uses a twisted cotton thread to remove unwanted hair from the face with precision and minimal irritation."
+                  "Threading for men is a hair removal technique that uses a twisted cotton thread to remove unwanted hair from the face with precision and minimal irritation.",
+                  int.parse("35"),
               ),
             ],
           ),

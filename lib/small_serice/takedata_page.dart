@@ -5,8 +5,9 @@ import 'package:final_homzy/main.dart';
 
 class LocationScreen extends StatefulWidget {
   final int price;
+  final int Time;
 
-  const LocationScreen({Key? key, required this.price}) : super(key: key);
+  const LocationScreen({Key? key, required this.price, required this.Time}) : super(key: key);
 
   @override
   _LocationScreenState createState() => _LocationScreenState();
@@ -90,7 +91,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     child: Text('Submit'),
                   ),
                 ),
-                Text('${widget.price}'),
+                Text('${widget.Time}'),
               ],
             ),
           ],

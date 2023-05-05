@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
   }
 }
 class HomeScreen extends StatelessWidget {
-  Widget SalonServiceConatiner(BuildContext context, String img, String name1, String name2, int price, String desc, String image){
+  Widget SalonServiceConatiner(BuildContext context, String img, String name1, String name2, int price, String desc, String image, int Time){
     return  Container(
    //   width: 200,
       child: Column(
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ServiceInfo (name: name1 + name2, img: Image.asset(image), price: price, desc: desc,)),
+                          MaterialPageRoute(builder: (context) => ServiceInfo (name: name1 + name2, img: Image.asset(image), price: price, desc: desc, Time: Time,)),
                         );
                       },
                       child: ClipRRect(
@@ -113,7 +113,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-  Widget ServiceCategories(BuildContext context, String img , String name1, String name2, int price, String desc, String image){
+  Widget ServiceCategories(BuildContext context, String img , String name1, String name2, int price, String desc, String image, int Time){
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -132,7 +132,7 @@ class HomeScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2, img: Image.asset(image), price: price, desc: desc,)),
+                            MaterialPageRoute(builder: (context) => ServiceInfo(name: name1 + name2, img: Image.asset(image), price: price, desc: desc, Time: Time,)),
                           );
                         },
                         child: ClipRRect(
@@ -1003,6 +1003,8 @@ class HomeScreen extends StatelessWidget {
                       int.parse("299"),
                       "A men's haircut typically involves using scissors or clippers to cut the hair to a desired length or style.",
                       "assets/salon_men/child_hari_cut.jpeg",
+                      int.parse("40"),
+                      
                     ),
                     SalonServiceConatiner(context,
                         "assets/salon_men/men_shaving.jpeg",
@@ -1011,6 +1013,7 @@ class HomeScreen extends StatelessWidget {
                       int.parse("149"),
                       " This can involve using shaving cream or gel to lubricate the skin and help the razor glide smoothly over the face.",
                       "assets/salon_men/men_shaving_4.1.jpeg",
+                      int.parse("30"),
                     ),
                     SalonServiceConatiner(context,
                         "assets/salon_men/men_hair_color.jpeg",
@@ -1019,6 +1022,7 @@ class HomeScreen extends StatelessWidget {
                      int.parse("999"),
                       "This can involve using a hair dye or other coloring product to add color to the hair, or to cover up gray hairs.",
                       "assets/salon_men/men_color_3.3.png",
+                      int.parse("60"),
                     ),
                     SalonServiceConatiner(context,
                         "assets/salon_men/facila_treatment.jpeg",
@@ -1027,6 +1031,7 @@ class HomeScreen extends StatelessWidget {
                       int.parse("599"),
                       "A facial treatment is a skincare procedure designed to improve the appearance and health of a man's facial skin.",
                       "assets/salon_men/facial_trement_2.0.webp",
+                      int.parse("25"),
                     ),
                   ],
                 ),
@@ -1045,6 +1050,7 @@ class HomeScreen extends StatelessWidget {
                       int.parse("499"),
                       "This can include cutting the hair to a certain length or style, as well as shaping the hair around the face, sides, and back of the head.",
                       "assets/salon_women/hair_cutt_women_5.2.jpeg",
+                      int.parse("45"),
                     ),
                     SalonServiceConatiner(context,
                         "assets/salon_women/hair_color.jpeg",
@@ -1053,6 +1059,7 @@ class HomeScreen extends StatelessWidget {
                       int.parse("2549"),
                       "This can involve using a hair dye or other coloring product to add color to the hair, or to cover up gray hairs.",
                       "assets/salon_women/coloring hair_women_sec.jpeg",
+                      int.parse("60"),
                     ),
 
                     SalonServiceConatiner(context,
@@ -1062,6 +1069,7 @@ class HomeScreen extends StatelessWidget {
                       int.parse("599"),
                       "Manicure and pedicure treatments are procedures designed to improve the appearance and health of a woman's hands, feet, and nails.",
                       "assets/salon_women/manicure_3.1.jpeg",
+                      int.parse("35"),
                     ),
                     SalonServiceConatiner(context,
                         "assets/salon_women/glow.jpeg",
@@ -1070,6 +1078,7 @@ class HomeScreen extends StatelessWidget {
                         int.parse("8999"),
                         "This can include makeup for special events or occasions, such as photo shoots, or everyday makeup for work or social situations.",
                       "assets/salon_women/makup_women_3.1.webp",
+                      int.parse("150"),
                     ),
                   ],
                 ),
@@ -1145,6 +1154,7 @@ class HomeScreen extends StatelessWidget {
                       int.parse("250"),
                       "Faucet repair and installation involve fixing or installing the plumbing fixture that controls the flow of water in a sink, bathtub, or shower.",
                       "assets/sub_service/plumber_image/faucet_4.1.webp",
+                      int.parse("40"),
                     ),
 
                     ServiceCategories(context,
@@ -1154,6 +1164,7 @@ class HomeScreen extends StatelessWidget {
                         int.parse("350"),
                       "Pipe repair involves fixing or replacing damaged pipes that carry water, gas, or other fluids throughout a building.",
                       "assets/sub_service/plumber_image/pipe_4.1.webp",
+                      int.parse("35"),
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/plumber_image/water_heater.png",
@@ -1162,6 +1173,7 @@ class HomeScreen extends StatelessWidget {
                         int.parse("799"),
                       "Water heater repair and installation involve fixing or installing the system that provides hot water to a building.",
                       "assets/sub_service/plumber_image/water_heater_3.3.jpeg",
+                      int.parse("45"),
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/plumber_image/water_system_3.2.jpeg",
@@ -1170,6 +1182,7 @@ class HomeScreen extends StatelessWidget {
                         int.parse("1000"),
                       "Water system repair and installation involve fixing or installing the plumbing system that provides potable water to a building.",
                       "assets/sub_service/plumber_image/water_system_3.2.jpeg",
+                      int.parse("35"),
                     ),
                   ],
                 ),
@@ -1207,6 +1220,7 @@ class HomeScreen extends StatelessWidget {
                       int.parse("599"),
                       "This can include repairing or replacing damaged components such as the compressor, condenser, or refrigerant lines, or cleaning and tuning up the system to improve its efficiency and performance.",
                       "assets/sub_service/Electric_image/ac_repair_3.3.jpeg",
+                      int.parse("45"),
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/Electric_image/Lighting.jpeg",
@@ -1215,6 +1229,7 @@ class HomeScreen extends StatelessWidget {
                         int.parse("350"),
                       "This can include repairing or replacing damaged components such as light fixtures, switches, or wiring, installing new lighting altogether.",
                       "assets/sub_service/Electric_image/lighting_3.3.webp",
+                      int.parse("30"),
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
@@ -1223,6 +1238,7 @@ class HomeScreen extends StatelessWidget {
                         int.parse("169"),
                       "This can include repairing or replacing damaged components such as the compressor, condenser, or evaporator fan, or cleaning and tuning up the system to improve its efficiency and performance.",
                       "assets/sub_service/Electric_image/referegator-repairing-large.jpg",
+                      int.parse("45"),
                     ),
                     ServiceCategories(context,
                       "assets/sub_service/Electric_image/washing_image.jpg",
@@ -1231,6 +1247,7 @@ class HomeScreen extends StatelessWidget {
                         int.parse("150"),
                       "This can include repairing or replacing damaged components such as the motor, belts, or agitator, or cleaning and tuning up the machine to improve its efficiency and performance.",
                       "assets/sub_service/Electric_image/washing_machine_3.2.jpeg",
+                      int.parse("45"),
                     ),
                   ],
                 ),

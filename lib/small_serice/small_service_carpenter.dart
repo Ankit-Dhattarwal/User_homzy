@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:final_homzy/small_serice/small_service_page.dart';
 
 class CarpenterServiceScreen extends StatelessWidget {
-  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc){
+  Widget SmallService( BuildContext context, String img, String name, String image, int price ,String desc, int Time){
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc,)),
+          MaterialPageRoute(builder: (context) => ServiceInfo (name: name, img: Image.asset(image), price: price, desc: desc,Time:Time,)),
         );
       },
 
@@ -77,28 +77,32 @@ class CarpenterServiceScreen extends StatelessWidget {
                   "Door repair",
                   "assets/carpenter_service/door_repaair_poster.jpg",
                   int.parse("399"),
-                  "We specialize in repairing all types of doors including wooden, glass, metal, and sliding doors."
+                  "We specialize in repairing all types of doors including wooden, glass, metal, and sliding doors.",
+                int.parse("60"),
               ),
               SmallService(context,
                   "assets/carpenter_service/roof_repair.jpeg",
                   "floor repair",
                   "assets/carpenter_service/floor_reapir_poster.jpg",
                   int.parse("999"),
-                  "We use high-quality materials and modern equipment to efficiently assess, repair, and protect your floors while prioritizing customer satisfaction with our quality workmanship and professionalism."
+                  "We use high-quality materials and modern equipment to efficiently assess, repair, and protect your floors while prioritizing customer satisfaction with our quality workmanship and professionalism.",
+                int.parse("50"),
               ),
               SmallService(context,
                   "assets/carpenter_service/cabinet_reapir.jpeg",
                   "Cabinet repair",
                   "assets/carpenter_service/cabinet_reapir_poster.webp",
                   int.parse("499"),
-                  "We use high-quality materials and modern equipment to efficiently repair any cabinet issue while prioritizing customer satisfaction with our excellent service and attention to detail."
+                  "We use high-quality materials and modern equipment to efficiently repair any cabinet issue while prioritizing customer satisfaction with our excellent service and attention to detail.",
+                int.parse("60"),
               ),
               SmallService(context,
                   "assets/carpenter_service/window_reapir.jpeg",
                   "Window repair",
                   "assets/carpenter_service/window_repair_poster.jpeg",
                   int.parse("449"),
-                  "We use high-quality materials and modern equipment to efficiently diagnose and repair any window issue while prioritizing customer satisfaction with our professional service and commitment to excellence."
+                  "We use high-quality materials and modern equipment to efficiently diagnose and repair any window issue while prioritizing customer satisfaction with our professional service and commitment to excellence.",
+                int.parse("40"),
               ),
             ],
           ),

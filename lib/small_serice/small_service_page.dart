@@ -8,12 +8,15 @@ import 'package:final_homzy/small_serice/small_services_small_contianer .dart';
    final Widget img;
    final int price;
    final String desc;
+   final int Time;
+
    const ServiceInfo({
      Key? key,
      required this.name,
      required this.img,
      required this.price,
      required this.desc,
+     required this.Time,
    }) : super(key: key);
 
 
@@ -23,7 +26,7 @@ import 'package:final_homzy/small_serice/small_services_small_contianer .dart';
 }
 
 class _ServiceInfoState extends State<ServiceInfo> {
-  Widget containerData(BuildContext context, String serviceName, String line, int price , String desc){
+  Widget containerData(BuildContext context, String serviceName, String line, int price , String desc, int Time){
     return Expanded(
       flex: 2,
       child: Container(
@@ -58,7 +61,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Icon(Icons.home_outlined, color: Colors.purpleAccent,),
-                          Text('Homzy plus', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.blueAccent),),
+                          Text('Homzy plus plus', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Colors.blueAccent),),
                         ],
                       ),
                     ),
@@ -100,7 +103,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
                         // Navigate to a new screen
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => LocationScreen(price: widget.price)),
+                          MaterialPageRoute(builder: (context) => LocationScreen(price: widget.price, Time: widget.Time,)),
                         );
                       },
                       child:Text('Book', style: TextStyle(fontSize: 20, color: Colors.black),),
@@ -146,7 +149,7 @@ class _ServiceInfoState extends State<ServiceInfo> {
             ),// As u wise use or not  by default flex is always 1
           ),
           containerData(context,
-          widget.name, 'Here homzy provide the best service', 599  , widget.desc),
+          widget.name, 'Here homzy provide the best service', 599  , widget.desc, widget.Time),
 
           // Divider(
           //   color: Colors.grey,
