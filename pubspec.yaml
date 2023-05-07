@@ -39,6 +39,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.2.0
   carousel_pro: ^1.0.0
+  url_launcher: ^6.1.10
+  flutter_linkify: ^5.0.2
 
 
 dev_dependencies:
